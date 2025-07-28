@@ -1,4 +1,125 @@
 {
-  "users": [],
-  "resumes": []
+  "users": [
+    {
+      "id": "4808",
+      "email": "kishor",
+      "password": "1111"
+    }
+  ],
+  "resumes": [
+    {
+      "id": "1",
+      "templateId": "1",
+      "name": "Kaushal Kishor",
+      "email": "kaushalkk.iimt@gmail.com",
+      "phone": "+91-9876543210",
+      "linkedin": "linkedin.com/in/kaushalkk",
+      "github": "github.com/kaushalkk",
+      "portfolio": "kaushalkk.dev",
+      "summary": "Experienced Full Stack Developer with a strong passion for clean code, scalability, and user-focused design.",
+      "skills": "Java, Python, React, Node.js, MongoDB, Docker",
+      "education": [
+        {
+          "institution": "IIMT College of Engineering",
+          "degree": "B.Tech in Computer Science",
+          "startYear": "2018",
+          "endYear": "2022"
+        }
+      ],
+      "experience": [
+        {
+          "company": "NIIT",
+          "position": "Full Stack Developer",
+          "startDate": "2022-06",
+          "endDate": "Present",
+          "description": "Building and scaling LMS platforms with GenAI workflow integration."
+        }
+      ],
+      "projects": [
+        {
+          "title": "Resume Builder",
+          "description": "An intelligent resume builder with template preview, grammar check, and PDF export.",
+          "link": "https://github.com/kkdevportal/resume-builder"
+        }
+      ],
+      "certifications": [
+        {
+          "title": "AWS Certified Developer",
+          "issuer": "Amazon",
+          "year": "2023"
+        }
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "interests": [
+        "Exploring Linux Distros",
+        "PC Gaming",
+        "Motorbike Travel",
+        "Learning new cultures"
+      ]
+    },
+    {
+      "id": "2",
+      "templateId": "2",
+      "name": "Test User",
+      "email": "test@example.com",
+      "skills": "HTML, CSS",
+      "summary": "Testing template rendering"
+    }
+  ],
+  "templates": [
+    {
+      "id": "1",
+      "name": "Modern Template",
+      "description": "A sleek modern look.",
+      "previewImage": "/assets/templates/template1.png"
+    },
+    {
+      "id": "2",
+      "name": "Classic Template",
+      "description": "A traditional resume layout.",
+      "previewImage": "/assets/templates/template2.png"
+    }
+  ],
+  "suggestions": {
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Docker",
+      "Python",
+      "TypeScript",
+      "AWS"
+    ],
+    "summaries": [
+      "Detail-oriented Full Stack Developer with experience in building scalable web apps.",
+      "Proficient in modern frontend/backend stacks and passionate about clean architecture."
+    ],
+    "jobTitles": [
+      "Software Engineer",
+      "Frontend Developer",
+      "Backend Developer",
+      "DevOps Engineer"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Google Cloud Engineer",
+      "Scrum Master"
+    ],
+    "languages": [
+      "English",
+      "Hindi",
+      "Spanish",
+      "French"
+    ],
+    "interests": [
+      "Linux Customization",
+      "Open Source Contribution",
+      "Traveling",
+      "Gaming"
+    ]
+  }
 }
