@@ -283,3 +283,5 @@ Would you like me to continue with:
 4. **Grammar Check API**
 5. **Final Polish: Icons, Toasts, Error Handling**
 
+## issue
+- pdf downloading as blanks
