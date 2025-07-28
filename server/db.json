@@ -10,26 +10,26 @@
     {
       "id": "1",
       "templateId": "1",
-      "name": "Test User",
-      "email": "test@example.com",
-      "phone": "",
-      "linkedin": "",
-      "github": "",
-      "portfolio": "",
-      "skills": ["HTML", "CSS"],
-      "summary": "Testing template rendering",
+      "name": "kaushal kishor",
+      "email": "kaushal.kishor@niit.com",
+      "phone": "8949140757",
+      "linkedin": "www.kaushal-kishor@linkden",
+      "github": "www.github.com",
+      "portfolio": "www.kaushaldevops",
+      "skills": "HTML,CSS,python, java",
+      "summary": "i am kaushal, professional software engineer working emxirence of 2 years",
       "education": [
         {
-          "institution": "",
-          "degree": "",
-          "startYear": "",
-          "endYear": ""
+          "institution": "iimt college of engineering",
+          "degree": "B.Tech",
+          "startYear": "2018",
+          "endYear": "2022"
         }
       ],
       "experience": [
         {
-          "company": "",
-          "position": "",
+          "company": "AARC PARTNERS",
+          "position": "Associate dev",
           "startDate": "",
           "endDate": "",
           "description": ""
@@ -50,8 +50,13 @@
           "year": ""
         }
       ],
-      "languages": [],
-      "interests": []
+      "languages": [
+        "english",
+        "hindi"
+      ],
+      "interests": [
+        "gaming"
+      ]
     }
   ],
   "templates": [

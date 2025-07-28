@@ -5,6 +5,8 @@ import {
   CircularProgress, Snackbar, Alert, Grid
 } from '@mui/material';
 import axios from 'axios';
+import html2pdf from 'html2pdf.js';
+import Template from './template/Template'
 
 const ResumeEditor = () => {
   const { id } = useParams();
@@ -26,9 +28,27 @@ const ResumeEditor = () => {
   const handleSave = () => {
     setSaving(true);
     axios.put(`http://localhost:5000/resumes/${id}`, resume)
-      .then(() => setSnackbarOpen(true))
+      .then(() => {
+        setSnackbarOpen(true);
+        setTimeout(() => {
+          const element = document.getElementById('resume-pdf');
+          if (element) {
+            html2pdf().set({
+              margin: 0,
+              filename: `${resume.name || 'resume'}.pdf`,
+              html2canvas: { scale: 2 },
+              jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            }).from(element).save();
+          } else {
+            console.error("resume-pdf element not found");
+          }
+        }, 800); // delay to ensure Template is fully rendered
+      })
       .finally(() => setSaving(false));
   };
+
+
+
 
   const handleNestedChange = (section, index, field, value) => {
     const updated = [...(resume[section] || [])];
@@ -112,19 +132,19 @@ const ResumeEditor = () => {
         ))}
 
         <Button onClick={() => {
-  setResume(prev => ({
-    ...prev,
-    experience: [...(prev.experience || []), {
-      company: '',
-      position: '',
-      startDate: '',
-      endDate: '',
-      description: ''
-    }]
-  }));
-}}>
-  + Add Experience
-</Button>
+          setResume(prev => ({
+            ...prev,
+            experience: [...(prev.experience || []), {
+              company: '',
+              position: '',
+              startDate: '',
+              endDate: '',
+              description: ''
+            }]
+          }));
+        }}>
+          + Add Experience
+        </Button>
 
 
         {/* Projects */}
@@ -138,18 +158,18 @@ const ResumeEditor = () => {
         ))}
 
         <Button onClick={() => {
-  setResume(prev => ({
-    ...prev,
-    projects: [...(prev.projects || []), {
-      title: '',
-      description: '',
-      link: '',
-      techStack: []
-    }]
-  }));
-}}>
-  + Add Project
-</Button>
+          setResume(prev => ({
+            ...prev,
+            projects: [...(prev.projects || []), {
+              title: '',
+              description: '',
+              link: '',
+              techStack: []
+            }]
+          }));
+        }}>
+          + Add Project
+        </Button>
 
 
         {/* Certifications */}
@@ -181,12 +201,18 @@ const ResumeEditor = () => {
         </Stack>
       </Stack>
 
+      {/* Hidden printable view */}
+      <Box id="resume-pdf" sx={{ visibility: 'hidden', position: 'absolute', top: 0, left: 0, width: '100%', zIndex: -1 }}>
+        <Template resumeData={resume} />
+      </Box>
+
       <Snackbar open={snackbarOpen} autoHideDuration={3000} onClose={() => setSnackbarOpen(false)}>
         <Alert severity="success" onClose={() => setSnackbarOpen(false)}>
           Resume updated successfully!
         </Alert>
       </Snackbar>
     </Container>
+
   );
 };
 
