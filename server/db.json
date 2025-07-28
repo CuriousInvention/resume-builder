@@ -10,77 +10,79 @@
     {
       "id": "1",
       "templateId": "1",
-      "name": "Kaushal Kishor",
-      "email": "kaushalkk.iimt@gmail.com",
-      "phone": "+91-9876543210",
-      "linkedin": "linkedin.com/in/kaushalkk",
-      "github": "github.com/kaushalkk",
-      "portfolio": "kaushalkk.dev",
-      "summary": "Experienced Full Stack Developer with a strong passion for clean code, scalability, and user-focused design.",
-      "skills": "Java, Python, React, Node.js, MongoDB, Docker",
+      "name": "Test User",
+      "email": "test@example.com",
+      "phone": "",
+      "linkedin": "",
+      "github": "",
+      "portfolio": "",
+      "skills": ["HTML", "CSS"],
+      "summary": "Testing template rendering",
       "education": [
         {
-          "institution": "IIMT College of Engineering",
-          "degree": "B.Tech in Computer Science",
-          "startYear": "2018",
-          "endYear": "2022"
+          "institution": "",
+          "degree": "",
+          "startYear": "",
+          "endYear": ""
         }
       ],
       "experience": [
         {
-          "company": "NIIT",
-          "position": "Full Stack Developer",
-          "startDate": "2022-06",
-          "endDate": "Present",
-          "description": "Building and scaling LMS platforms with GenAI workflow integration."
+          "company": "",
+          "position": "",
+          "startDate": "",
+          "endDate": "",
+          "description": ""
         }
       ],
       "projects": [
         {
-          "title": "Resume Builder",
-          "description": "An intelligent resume builder with template preview, grammar check, and PDF export.",
-          "link": "https://github.com/kkdevportal/resume-builder"
+          "title": "",
+          "description": "",
+          "link": "",
+          "techStack": []
         }
       ],
       "certifications": [
         {
-          "title": "AWS Certified Developer",
-          "issuer": "Amazon",
-          "year": "2023"
+          "title": "",
+          "issuer": "",
+          "year": ""
         }
       ],
-      "languages": [
-        "English",
-        "Hindi"
-      ],
-      "interests": [
-        "Exploring Linux Distros",
-        "PC Gaming",
-        "Motorbike Travel",
-        "Learning new cultures"
-      ]
-    },
-    {
-      "id": "2",
-      "templateId": "2",
-      "name": "Test User",
-      "email": "test@example.com",
-      "skills": "HTML, CSS",
-      "summary": "Testing template rendering"
+      "languages": [],
+      "interests": []
     }
   ],
   "templates": [
     {
       "id": "1",
-      "name": "Modern Template",
-      "description": "A sleek modern look.",
-      "previewImage": "/assets/templates/template1.png"
-    },
-    {
-      "id": "2",
-      "name": "Classic Template",
-      "description": "A traditional resume layout.",
-      "previewImage": "/assets/templates/template2.png"
+      "name": "Modern",
+      "layout": {
+        "order": [
+          "header",
+          "summary",
+          "skills",
+          "education",
+          "experience",
+          "projects",
+          "certifications",
+          "languages",
+          "interests"
+        ],
+        "styles": {
+          "header": {
+            "bgColor": "#f0f0f0",
+            "align": "center",
+            "fontSize": "28px"
+          },
+          "sectionTitle": {
+            "fontWeight": "bold",
+            "marginTop": "20px"
+          }
+        }
+      },
+      "previewImage": "/assets/templates/modern.png"
     }
   ],
   "suggestions": {
